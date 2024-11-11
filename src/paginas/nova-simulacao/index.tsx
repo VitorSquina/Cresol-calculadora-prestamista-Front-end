@@ -108,6 +108,7 @@ export const NovaSimulacao = () => {
           />
           <Input
             label="Valor Segurado"
+            placeholder="R$ 00.00"
             value={valorSegurado}
             onChange={(e) =>
               setValorSegurado((e.target as HTMLInputElement).value)
