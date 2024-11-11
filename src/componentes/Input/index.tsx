@@ -5,8 +5,8 @@ type InputProps = {
   label: string;
   value: string;
   onChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
-  type?: string; // Tipo opcional para especificar o tipo do input (e.g., "text", "date")
-  placeholder?: string; // Tipo opcional para o placeholder
+  type?: string;
+  placeholder?: string;
 } & HTMLAttributes<HTMLInputElement>;
 
 export const Input = ({
@@ -24,7 +24,7 @@ export const Input = ({
         type={type}
         value={value}
         onChange={onChange}
-        placeholder={placeholder} // Adiciona o placeholder aqui
+        placeholder={placeholder}
         {...props}
       />
     </Wrapper>

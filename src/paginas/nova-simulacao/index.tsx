@@ -6,7 +6,6 @@ import { useMutation } from "react-query";
 import axios, { AxiosError } from "axios";
 import { Button } from "@mui/material";
 
-// Tipo do resultado esperado da API
 type ResultadoSimulacao = {
   valorTotalPremio: number;
   produtoEscolhido: {
@@ -15,7 +14,6 @@ type ResultadoSimulacao = {
   };
 };
 
-// Tipo para a resposta de erro da API
 type ApiErrorResponse = {
   error?: string;
   message?: string;
@@ -61,7 +59,7 @@ export const NovaSimulacao = () => {
     },
     onError: (error: unknown) => {
       if (error instanceof AxiosError) {
-        const responseData = error.response?.data as ApiErrorResponse; // Faz o type assertion
+        const responseData = error.response?.data as ApiErrorResponse;
         const errorMessage =
           responseData?.error ||
           responseData?.message ||
